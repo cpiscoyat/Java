@@ -16,29 +16,31 @@ public class POO {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
-       Operaciones op = new Operaciones();
+       Operaciones op = new Operaciones(); // Instancia
        op.Operar();
-       op.x=5;
-       op.y=10;
+       op.setX(5);
+       op.setY(10);
+       
+       Operaciones op2=new Operaciones();
+       op2.setX(50);
+       op2.setY(20);
+       
+       Operaciones op3=new Operaciones(2,9);       
+     
+       double suma2= op.Sumar();
+       System.out.println("La suma es "+suma2);
+       System.out.println("La resta es "+op.Restar());
+       System.out.println("la multiplicacion es "+op.Multiplicar());
+       System.out.println("la división es "+op.Dividir());
+       System.out.println("Multiplicando PI x X"+ (Operaciones.z*op.getX()));
         
-        double a=5;
-        double b=10;
-        
-        //double suma=a+b;
-        //System.out.println("La suma es "+suma);
-        double suma2= op.Sumar();
-        System.out.println("La suma es "+suma2);
-        
-        //double resta=a-b;
-        //System.out.println("la resta es "+resta);
-        System.out.println("La resta es "+op.Restar());
-        
-        double multiplicacion=a*b;
-        System.out.println("la multiplicacion es "+multiplicacion);
-        
-        double division=a/b;
-        System.out.println("la división es "+division);
+       System.out.println("----------------------------------------------------------------");
+       System.out.println("La suma "+op3.Sumar());
+       System.out.println("La suma "+op3.Restar());
+       System.out.println("La suma "+op3.Multiplicar());
+       System.out.println("La suma "+op3.Dividir());
+       
+       System.out.println(op3);
     }
     
 }
